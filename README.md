@@ -1,4 +1,4 @@
-jcasbin-jfinal-plugin
+jcasbin-jfinal-plugin [![Build Status](https://travis-ci.org/jcasbin/jcasbin-jfinal-plugin.svg?branch=master)](https://travis-ci.org/jcasbin/jcasbin-jfinal-plugin) [![Coverage Status](https://coveralls.io/repos/github/jcasbin/jcasbin-jfinal-plugin/badge.svg?branch=master)](https://coveralls.io/github/jcasbin/jcasbin-jfinal-plugin?branch=master)
 ======
 
 jcasbin-jfinal-plugin is an authorization middleware for [JFinal](http://www.jfinal.com/), it's based on [https://github.com/casbin/jcasbin](https://github.com/casbin/jcasbin). It is developed under the latest JFinal ``3.4`` and Java ``8``.
