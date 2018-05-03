@@ -7,6 +7,18 @@
     <groupId>org.jcasbin.plugins</groupId>
     <artifactId>jcasbin-springboot-plugin</artifactId>
     <version>0.0.1</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <name>jCasbin JFinal Plugin</name>
     <description>Demo project for JFinal</description>
@@ -26,6 +38,11 @@
                 打 war 包时需要改成 provided，以免将一些无用的 jar 打进去
             -->
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.casbin</groupId>
+            <artifactId>jcasbin</artifactId>
+            <version>0.0.4-FIX</version>
         </dependency>
     </dependencies>
 
