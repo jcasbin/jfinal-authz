@@ -69,8 +69,8 @@ public class DemoConfig extends JFinalConfig {
      * 配置全局拦截器
      */
     public void configInterceptor(Interceptors me) {
-        me.add(new HttpBasicAuthnIntercepter());
-        me.add(new JCasbinAuthzIntercepter());
+        me.add(new HttpBasicAuthnInterceptor());
+        me.add(new JCasbinAuthzInterceptor());
     }
 
     /**

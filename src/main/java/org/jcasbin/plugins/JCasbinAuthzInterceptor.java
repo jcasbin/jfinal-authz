@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.nio.charset.Charset;
 import java.util.Base64;
 
-public class JCasbinAuthzIntercepter implements Interceptor {
+public class JCasbinAuthzInterceptor implements Interceptor {
     static Enforcer enforcer;
 
     // Initialize jCasbin's enforcer with model and policy rules.

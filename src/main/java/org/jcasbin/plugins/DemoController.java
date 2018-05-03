@@ -17,7 +17,7 @@ package org.jcasbin.plugins;
 import com.jfinal.aop.Before;
 import com.jfinal.core.Controller;
 
-@Before(JCasbinAuthzIntercepter.class)
+@Before(JCasbinAuthzInterceptor.class)
 public class DemoController extends Controller {
     public void index() {
         String path = getRequest().getRequestURI();

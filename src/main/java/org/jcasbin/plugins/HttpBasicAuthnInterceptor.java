@@ -24,7 +24,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.StringTokenizer;
 
-public class HttpBasicAuthnIntercepter implements Interceptor {
+public class HttpBasicAuthnInterceptor implements Interceptor {
     private String realm = "Protected";
 
     @Override
