@@ -24,6 +24,10 @@ public class DemoConfig extends JFinalConfig {
 }
 ```
 
+## Tutorials
+
+- [加强JFinal的权限管理：与jCasbin权限管理框架进行整合](http://www.jfinal.com/share/842)
+
 ## Getting Help
 
 - [jCasbin](https://github.com/casbin/jcasbin)
