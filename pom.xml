@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jcasbin.plugins</groupId>
-    <artifactId>jcasbin-springboot-plugin</artifactId>
+    <artifactId>jcasbin-jfinal-plugin</artifactId>
     <version>0.0.1</version>
 
     <name>jCasbin JFinal Plugin</name>
