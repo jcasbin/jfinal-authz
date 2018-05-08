@@ -27,33 +27,6 @@ import java.util.StringTokenizer;
 public class HttpBasicAuthnInterceptor implements Interceptor {
     private String realm = "Protected";
 
-    @Override
-    public void intercept(Invocation inv) {
-        HttpServletRequest request = inv.getController().getRequest();
-        HttpServletResponse response = inv.getController().getResponse();
-
-        try {
-            // Get user name and password from HTTP header.
-            String credentials = getUserPassword(request, response);
-            if (credentials.equals("")) {
-                return;
-            }
-            int p = credentials.indexOf(":");
-            String username = credentials.substring(0, p).trim();
-            String password = credentials.substring(p + 1).trim();
-
-            // Check the user name and password.
-            if (!checkUserPassword(username, password)) {
-                unauthorized(response, "Bad credentials");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // All passed, go to the next handler.
-        inv.invoke();
-    }
-
     // Gets HTTP basic authentication's user name and password.
     private String getUserPassword(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String authHeader = request.getHeader("Authorization");
@@ -92,5 +65,31 @@ public class HttpBasicAuthnInterceptor implements Interceptor {
     private void unauthorized(HttpServletResponse response, String message) throws IOException {
         response.setHeader("WWW-Authenticate", "Basic realm=\"" + realm + "\"");
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, message);
+    }
+
+    public void intercept(Invocation inv) {
+        HttpServletRequest request = inv.getController().getRequest();
+        HttpServletResponse response = inv.getController().getResponse();
+
+        try {
+            // Get user name and password from HTTP header.
+            String credentials = getUserPassword(request, response);
+            if (credentials.equals("")) {
+                return;
+            }
+            int p = credentials.indexOf(":");
+            String username = credentials.substring(0, p).trim();
+            String password = credentials.substring(p + 1).trim();
+
+            // Check the user name and password.
+            if (!checkUserPassword(username, password)) {
+                unauthorized(response, "Bad credentials");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // All passed, go to the next handler.
+        inv.invoke();
     }
 }
