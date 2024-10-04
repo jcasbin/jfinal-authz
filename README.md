@@ -1,11 +1,19 @@
-jcasbin-jfinal-plugin [![Build Status](https://github.com/jcasbin/jfinal-authz/actions/workflows/maven-ci.yml/badge.svg)](https://github.com/jcasbin/jfinal-authz/actions/workflows/maven-ci.yml)
-======
+# jcasbin-jfinal-plugin 
+[![Build Status](https://github.com/jcasbin/jfinal-authz/actions/workflows/maven-ci.yml/badge.svg)](https://github.com/jcasbin/jfinal-authz/actions/workflows/maven-ci.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/org.casbin/jcasbin-jfinal-plugin.svg)](https://central.sonatype.com/artifact/org.casbin/jcasbin-jfinal-plugin)
+
 
 jcasbin-jfinal-plugin is an authorization middleware for [JFinal](http://www.jfinal.com/), it's based on [https://github.com/casbin/jcasbin](https://github.com/casbin/jcasbin). It is developed under the latest JFinal ``3.4`` and Java ``8``.
 
 ## Installation
 
-    git clone https://github.com/jcasbin/jcasbin-jfinal-plugin
+```xml
+<dependency>
+    <groupId>org.casbin</groupId>
+    <artifactId>jcasbin-jfinal-plugin</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
 
 ## Simple Example
 
